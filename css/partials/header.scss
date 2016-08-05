@@ -1,0 +1,13 @@
+.header {
+  .logo {float:left; width:30%; background: url(img/pattern.jpg) center; width:30%; padding:20px;
+    img {float:right; width:230px;}
+  }
+  .nav {float:right; width:70%;
+    ul {list-style:none; @include vertical-align();
+      li {display:inline-block; text-transform:uppercase; font-weight:600; margin:0 20px; }
+    }
+  }
+}
+
+
+
