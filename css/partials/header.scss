@@ -1,10 +1,10 @@
 .header {
-  .logo {float:left; width:30%; background: url(img/pattern.jpg) center; width:30%; padding:20px;
-    img {float:right; width:230px;}
+  .logo {float:left; width:30%; background: url(img/pattern.jpg) center; width:30%;
+    a {float:right; width:270px; padding:20px;}
   }
   .nav {float:right; width:70%;
-    ul {list-style:none; @include vertical-align();
-      li {display:inline-block; text-transform:uppercase; font-weight:600; margin:0 20px; }
+    ul {list-style:none; @include vertical-align(); margin:0; padding:0 0 0 35px;
+      li {display:inline-block; text-transform:uppercase; font-weight:600; margin:0 15px; }
     }
   }
 }

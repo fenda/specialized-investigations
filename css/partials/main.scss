@@ -1,0 +1,49 @@
+.wrapper {
+  max-width: $wrapper-width;
+  padding: 0 $margin-horizontal-large;
+  margin: 0 auto;
+  position: relative;
+}
+
+body {font: 14px/20px 'Open Sans', sans-serif;}
+
+.section-title {margin-bottom:30px;
+  h1 {text-transform:uppercase; font-size:20px;}
+  .border-bottom {content:''; width:120px; height:4px; background:$main-color; display:inline-block;}
+}
+
+.button {display:inline-block; background:$main-color; font-size:13px; color:#FFF; text-transform:uppercase; text-align:center; padding:10px 40px; margin:10px 0;}
+
+#home_slider {
+  p.tp-caption {text-shadow: 0 0 5px rgba(0,0,0,.8);}
+}
+
+#demonstration, #testimonials {text-align:center; background-size:cover; color:#FFF; padding:60px 0;}
+
+#demonstration {background-image: url(img/video-bg.jpg); overflow:hidden;
+  .section-title {display:none;}
+  h3 {font-size:29px; line-height:36px; font-weight:600; margin:0 0 35px;}
+}
+
+#welcome, #associations {float:left; padding:50px;}
+
+#welcome {width:40%; background:#e6e6e6;
+  .wrapper {width:100%; max-width:420px; float:right; overflow:hidden;}
+}
+
+#associations {width:60%;
+  .wrapper {width:100%; max-width:630px; float:left; overflow:hidden;}
+}
+
+#testimonials {background-image: url(img/testimonials-bg.jpg);
+  .section-title {
+    .border-bottom {background:$body-bg;}
+  }
+  .wrapper {max-width:800px;}
+  p {font-size:24px; font-style:italic; line-height:34px; font-weight:300;
+    &.testimonial_author {font-size:19px; font-weight:500;}
+  }
+  .owl-dot {display:inline-block; background:$body-bg; width:15px; height:15px; margin:0 7px; border-radius:8px; opacity:.4;
+    &.active {opacity:1;}
+  }
+}

@@ -1,0 +1,39 @@
+@media (max-width: 1165px) {
+  .header {
+    .nav {
+      ul {padding-left:10px;
+        li {margin:0 7px;}
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #welcome, #associations {width:100%; height:auto !important; text-align:center;
+    .wrapper {width:100%; max-width:100%;}
+  }
+  .footer {
+    #footer_widgets {
+      & > div {width:48%;}
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .header {
+    .logo {
+      a {width:200px; padding:10px;}
+    }
+    .nav {font-size:.8em;}
+  }
+}
+
+@media (max-width: 760px) {
+  .footer {
+    #footer_widgets {text-align:center;
+      & > div {width:100%; display:inline-block; float:none; text-align:center; margin-bottom:25px;
+        &:last-of-type {float:none;}
+      }
+    }
+  }
+} 
