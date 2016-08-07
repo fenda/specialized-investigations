@@ -1,13 +1,38 @@
-.header {
+@import "modules/variables";
+
+.header {position:relative; z-index:1;
   .logo {float:left; width:30%; background: url(img/pattern.jpg) center; width:30%;
     a {float:right; width:270px; padding:20px;}
   }
   .nav {float:right; width:70%;
-    ul {list-style:none; @include vertical-align(); margin:0; padding:0 0 0 35px;
-      li {display:inline-block; text-transform:uppercase; font-weight:600; margin:0 15px; }
+    ul {list-style:none; margin:0; padding:0 0 0 35px;
+      li {position:relative; float:left; text-transform:uppercase; font-weight:600;
+        &:after {content:''; position:absolute; width:100%; height:0; background:$main-color; top:0; left:0; z-index:-1; transition:height .4s; -o-transition:height .4s; -ms-transition: height .4s; -moz-transition: height .4s; -webkit-transition: height .4s;}
+        &:hover {
+          &:after {height:100%;}
+          a {color:#FFF;}
+          ul {
+            li {
+              a {color:#666;}
+            }
+          }
+        }
+        a {padding:57px 15px; display:inline-block;
+          &:hover {text-decoration:none; color:#FFF;
+          }
+        }
+        ul {position:absolute; top:180px; left:0; margin:0; padding:0; width:220px; transition:.5s; opacity:0; visibility:hidden;
+          li {display:inline-block; width:100%; padding:0; border:1px solid #e3e3e3; border-width:1px 1px 0 1px; text-transform:uppercase; margin:0;
+            a {padding:8px 10px; background:#FFF; width:100%; transition:.5s; 
+              &:hover {background-color:#ececec; color:$main-color;}
+            }
+            &:last-child {border-width:1px;}
+          }
+        }
+        &:hover {
+          ul {top:134px; opacity:1; visibility:visible;}
+        }
+      }
     }
   }
 }
-
-
-

@@ -412,7 +412,7 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 function create_post_type_html5() {
     //register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
     //register_taxonomy_for_object_type('post_tag', 'html5-blank');
-    register_post_type('html5-blank', // Register Custom Post Type
+    register_post_type('services', // Register Custom Post Type
         array(
         'labels' => array(
             'name' => __('Services', 'html5blank'), // Rename these to suit

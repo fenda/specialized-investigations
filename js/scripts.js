@@ -34,8 +34,8 @@
 			$element.height(height);
 		};
 
-		$.fn.equalHeightHeader = function(){
-			var $element = $('.logo, .nav');
+		$.fn.equalHeightContent = function(){
+			var $element = $('.sidebar, .main_content');
 			var height = 0;
 			$element.each(function () {
 				if ($(this).height() > height) {
@@ -47,7 +47,7 @@
 		};
 
 		$.fn.equalHeight();
-		$.fn.equalHeightHeader();
+		$.fn.equalHeightContent();
 
 		//responsive youtube videos
 		var allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='//www.youtube.com']");

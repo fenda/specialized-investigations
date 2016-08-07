@@ -1,3 +1,5 @@
+@import "modules/mixins";
+
 .wrapper {
   max-width: $wrapper-width;
   padding: 0 $margin-horizontal-large;
@@ -46,4 +48,14 @@ body {font: 14px/20px 'Open Sans', sans-serif;}
   .owl-dot {display:inline-block; background:$body-bg; width:15px; height:15px; margin:0 7px; border-radius:8px; opacity:.4;
     &.active {opacity:1;}
   }
+}
+
+// internal pages
+.page_title {text-align:center; overflow:hidden;
+  h1 {text-shadow:0 0 5px rgba(0,0,0,0.8); color:#FFF; font-size:60px; text-transform:uppercase; width:100%; z-index:2; @include vertical-align(absolute); margin:0;}
+}
+
+.main_content {float:right; width:70%; padding:50px;
+  .wrapper {width:100%; max-width:784px; float:left; overflow:hidden;}
+  ul {}
 }
