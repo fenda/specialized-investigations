@@ -1,3 +1,22 @@
 .sidebar {float:left; background:#e6e6e6; width:30%; padding:50px;
   .wrapper {width:100%; max-width:336px; float:right; overflow:hidden;}
+  .widget_nav_menu {
+    ul {padding:0; margin:0; list-style:none;
+      li {display:block; text-transform:uppercase; padding:5px 0; font-weight:800;
+        a {color:#666;}
+        &:hover {
+          a {color:darken( $main-color, 10% );}
+        }
+        &.current-menu-item {
+          a {color:$main-color;}
+        }
+      }
+    }
+  }
+}
+
+ul.social {margin:0; padding:0; list-style:none;
+  li {display:inline-block; font-size:20px; margin:0 10px 3px 0;
+    a {color:#666;}
+  }
 }

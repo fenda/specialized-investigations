@@ -45,7 +45,7 @@ body {font: 14px/20px 'Open Sans', sans-serif;}
   p {font-size:24px; font-style:italic; line-height:34px; font-weight:300;
     &.testimonial_author {font-size:19px; font-weight:500;}
   }
-  .owl-dot {display:inline-block; background:$body-bg; width:15px; height:15px; margin:0 7px; border-radius:8px; opacity:.4;
+  .owl-dot {display:inline-block; background:$body-bg; width:15px; height:15px; margin:0 12px; border-radius:8px; opacity:.4;
     &.active {opacity:1;}
   }
 }
@@ -58,4 +58,11 @@ body {font: 14px/20px 'Open Sans', sans-serif;}
 .main_content {float:right; width:70%; padding:50px;
   .wrapper {width:100%; max-width:784px; float:left; overflow:hidden;}
   ul {}
+}
+
+//form
+.wpcf7-form {width:100%; max-width:400px;
+  input, textarea {border:1px solid #e3e3e3; height:2.25em; padding:0.5em 0.9em; width:100%; font-size:.9em;}
+  textarea {height:100px;}
+  .button {border:none; width:auto;}
 }
