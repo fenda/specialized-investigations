@@ -46,8 +46,11 @@
 			$element.height(height);
 		};
 
-		$.fn.equalHeight();
-		$.fn.equalHeightContent();
+		// mobile nav
+		$('.mobile_nav').on('click', function(){
+			$('.header .nav').toggleClass('open');
+		});
+		
 
 		//responsive youtube videos
 		var allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='//www.youtube.com']");
@@ -63,6 +66,13 @@
 				$(this).width(newWidth).height(newWidth * $(this).data('aspectRatio'));
 				});
 		}).resize();
+
+		$(document).ready(function(){
+			setTimeout(function(){
+			  $.fn.equalHeight();
+				$.fn.equalHeightContent();
+			}, 500);
+		});
 		
 	});
 	

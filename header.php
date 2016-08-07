@@ -29,7 +29,7 @@
 					<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
 				</a>
 			</div>
-
+      <a href="#" class="mobile_nav"><i class="fa fa-bars" aria-hidden="true"></i></a>
 			<nav class="nav" role="navigation">
 				<?php html5blank_nav(); ?>
 			</nav>
