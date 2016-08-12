@@ -3,7 +3,7 @@
     .nav {
       ul {padding-left:10px;
         li {
-          a {padding:57px 10px;}
+          a {padding:56px 10px;}
         }
       }
     }
@@ -29,7 +29,7 @@
     .nav {font-size:.8em;
       ul {
         li {
-          a {padding:37px 10px;}
+          a {padding:36px 10px;}
           &:hover {
             ul {top:94px;}
           }
@@ -94,6 +94,7 @@
           }
           ul {position:relative; opacity:1; visibility:visible;  top:auto; left:auto; width:100%;
             li {border-width:0 0 1px 0; width:100%;
+              a {padding-left:25px;}
               &:first-child {border-top:1px solid #e3e3e3;}
               &:last-child {border:none;}
             }
@@ -107,5 +108,14 @@
       &.open {display:block; height:507px;;}
     }
     .mobile_nav {position:absolute; color:#FFF; top:30px; right:30px; font-size:24px;}
+  }
+  .page_title {
+    h1 {font-size:30px;}
+  }
+  #home_slider {
+    p.tp-caption {font-size:25px !important; line-height:1.2 !important;}
+    .tp-caption {
+      &.rev-btn {display:none !important;}
+    }
   }
 }

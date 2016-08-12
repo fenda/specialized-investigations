@@ -125,7 +125,7 @@ function enqueue_font_awesome() {
 
 function load_fonts() {
     wp_register_style('openSans', 'http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700italic,600italic,400italic');
-    wp_enqueue_style( 'ralewayFont');
+    wp_enqueue_style( 'openSans');
 }
 
 // Register HTML5 Blank Navigation
