@@ -63,11 +63,18 @@
 
 @media (max-width: 760px) {
   .sidebar-logo {display:none;}
-  .sidebar, .main_content {width:100%; height:auto !important;}
+  .sidebar, .main_content {width:100%; height:auto !important; padding:50px 20px}
   .sidebar {
     .wrapper {max-width:100%;}
     .widget_nav_menu {
       ul {text-align:center;}
+    }
+  }
+  .blog_list {
+    li {
+      figure {max-width:100%; width:100%; margin:0 0 20px;
+        img {max-width:200%; width:100%;}
+      }
     }
   }
   .footer {
@@ -118,4 +125,6 @@
       &.rev-btn {display:none !important;}
     }
   }
+
+  .alignleft, .alignright {max-width:100%; width:100%;}
 }

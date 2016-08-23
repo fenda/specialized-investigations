@@ -19,16 +19,16 @@ if (!isset($content_width)) {
     $content_width = 900;
 }
 
-if (function_exists('add_theme_support'))
-{
+if (function_exists('add_theme_support')) {
     // Add Menu Support
     add_theme_support('menus');
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    add_image_size('large', 700, '', true); // Large Thumbnail
-    add_image_size('medium', 250, '', true); // Medium Thumbnail
-    add_image_size('small', 120, '', true); // Small Thumbnail
+    add_image_size('large', 700, '', true);
+    add_image_size('medium', 250, '', true);
+    add_image_size('small', 120, '', true);
+    add_image_size('featured', 370, 160, true);
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
@@ -173,8 +173,7 @@ function add_slug_to_body_class($classes)
 }
 
 // If Dynamic Sidebar Exists
-if (function_exists('register_sidebar'))
-{
+if (function_exists('register_sidebar')) {
     // Define Sidebar Widget Area 1
     register_sidebar(array(
         'name' => __('Widget Area 1', 'html5blank'),
@@ -191,6 +190,17 @@ if (function_exists('register_sidebar'))
         'name' => __('Footer', 'html5blank'),
         'description' => __('Footer widgets', 'html5blank'),
         'id' => 'footer-widgets',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+
+    // Define Sidebar Widget Area 2
+    register_sidebar(array(
+        'name' => __('Blog', 'html5blank'),
+        'description' => __('Blog sidebar', 'html5blank'),
+        'id' => 'blog',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
@@ -251,10 +261,9 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
 }
 
 // Custom View Article link to Post
-function html5_blank_view_article($more)
-{
+function html5_blank_view_article($more) {
     global $post;
-    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'html5blank') . '</a>';
+    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('Read More', 'html5blank') . '</a>';
 }
 
 // Remove Admin bar

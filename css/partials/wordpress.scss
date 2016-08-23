@@ -1,63 +1,19 @@
-/**
- * partials/wordpress
- * ---
- * Wordpess core classes
- */
-
-
-.sticky {}
-
-.bypostauthor {}
-
-/**
- * Alignment
- */
-
-.alignnone {
-  margin: $margin-vertical-base $margin-horizontal-large $margin-vertical-large 0;
+.alignnone {margin: $margin-vertical-base $margin-horizontal-large $margin-vertical-large 0;}
+.aligncenter {display:block; margin: $margin-vertical-base auto;}
+.alignright {float:right; margin: $margin-vertical-base 0 $margin-vertical-large $margin-horizontal-large; max-width:50%;}
+.alignleft {float:left; margin: $margin-vertical-base $margin-horizontal-large $margin-vertical-large 0; max-width:50%;}
+.wp-caption {background: $body-bg; border: thin solid #F0F0F0; max-width:95%; padding: $padding-horizontal-base $padding-vertical-base; text-align:center;
+  & img {width:auto; max-width:98.5%; height:auto; border:0 none; @include reset-box;}
 }
+.wp-caption .wp-caption-text, .gallery-caption {margin: 0; padding: 0 $padding-horizontal-base $padding-vertical-base; font-size: $font-size-base; line-height: $line-height-base;}
 
-.aligncenter {
-  display: block;
-  margin: $margin-vertical-base auto;
-}
-
-.alignright {
-  float: right;
-  margin: $margin-vertical-base 0 $margin-vertical-large $margin-horizontal-large;
-}
-
-.alignleft {
-  float: left;
-  margin: $margin-vertical-base $margin-horizontal-large $margin-vertical-large 0;
-}
-
-
-/**
- * Gallery & images
- */
-
-.wp-caption {
-  background: $body-bg;
-  border: thin solid #F0F0F0;
-  max-width: 95%;
-  padding: $padding-horizontal-base $padding-vertical-base;
-  text-align: center;
-
-  & img {
-    width: auto;
-    max-width: 98.5%;
-    height: auto;
-    border: 0 none;
-
-    @include reset-box;
+.pagination {margin:50px 0 30px; border:1px solid $main-color; border-radius:3px; float:left; border-left:0;
+  a, span {border-left:1px solid $main-color; float:left; width:50px; height:40px; text-align:center; line-height:38px;
+    &.next {width:70px;}
+    &.prev {width:100px;}
   }
-}
-
-.wp-caption .wp-caption-text,
-.gallery-caption {
-  margin: 0;
-  padding: 0 $padding-horizontal-base $padding-vertical-base;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
+  a {color:$main-color; transition:.5s; text-decoration:none;
+    &:hover {background:$main-color; color:#FFF;}
+  }
+  span {font-weight:bold;}
 }
