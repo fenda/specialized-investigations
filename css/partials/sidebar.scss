@@ -25,6 +25,11 @@
         &:hover {text-decoration:none; color:#FFF;}
       }
     }
+    &.social {
+      li {
+        &:before {display:none;}
+      }
+    }
   }
 
   .widget_search {
@@ -40,6 +45,7 @@
 
 ul.social {margin:0; padding:0; list-style:none;
   li {display:inline-block; font-size:20px; margin:0 10px 3px 0;
+    &:before {display:none;}
     a {color:#666;}
   }
 }
